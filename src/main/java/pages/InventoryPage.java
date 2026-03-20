@@ -30,4 +30,10 @@ public class InventoryPage extends BasePage {
     public void goToCart() {
         cartIcon.click();
     }
+
+    public void addMultipleProducts(int amount) {
+        for (int i = 0; i < amount; i++) {
+            addToCartButtons.get(i).click();
+        }
+    }
 }
