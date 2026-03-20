@@ -36,4 +36,15 @@ public class InventoryPage extends BasePage {
             addToCartButtons.get(i).click();
         }
     }
+
+    @FindBy(id = "react-burger-menu-btn")
+    private WebElement menuButton;
+
+    @FindBy(id = "logout_sidebar_link")
+    private WebElement logoutLink;
+
+    public void logout() {
+        menuButton.click();
+        click(logoutLink); 
+    }
 }
